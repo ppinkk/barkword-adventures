@@ -19,12 +19,11 @@ export default function Home() {
           <Image
             src="/assets/poodle-idle.png"
             alt="Jabby Poodle"
-            width={64}
-            height={64}
-            className="max-w-full h-auto object-contain mx-auto"
+            width={744}
+            height={659}
+            className="w-16 max-w-full h-auto object-contain mx-auto"
             priority
             unoptimized
-            style={{ imageRendering: "pixelated" }}
           />
         </div>
         <h1 className="text-2xl font-black tracking-wider bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-400 bg-clip-text text-transparent uppercase drop-shadow-md">
@@ -50,11 +49,10 @@ export default function Home() {
               <Image
                 src="/assets/poodle-idle.png"
                 alt="Jabby the Poodle"
-                width={56}
-                height={56}
+                width={744}
+                height={659}
                 className="max-w-full h-auto object-contain"
                 unoptimized
-                style={{ imageRendering: "pixelated" }}
               />
             </div>
           </div>
@@ -164,12 +162,11 @@ export default function Home() {
               <Image
                 src={activeLevel.idleAssetPath}
                 alt={activeLevel.enemyName}
-                width={120}
-                height={120}
-                className="max-w-full max-h-full h-auto w-auto object-contain"
+                width={1024}
+                height={1024}
+                className="max-w-full h-auto object-contain"
                 priority
                 unoptimized
-                style={{ imageRendering: "pixelated" }}
               />
             </div>
             <div className="mt-2 text-[9px] text-purple-400 font-bold uppercase tracking-wider text-center">
