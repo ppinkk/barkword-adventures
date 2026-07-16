@@ -133,7 +133,7 @@ export default function Home() {
         </div>
 
         {/* Active level details */}
-        <div className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-4 flex-1 flex flex-col justify-between gap-4">
+        <div className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-4 flex flex-col gap-4">
           <div>
             <div className="flex justify-between items-start gap-2 mb-2">
               <h4 className="text-sm font-black text-purple-300 leading-tight">
@@ -156,20 +156,20 @@ export default function Home() {
           </div>
 
           {/* Enemy Visual Preview */}
-          <div className="flex-1 flex flex-col items-center justify-center min-h-[140px] bg-slate-950/30 border border-slate-900/50 rounded-xl p-3 relative overflow-hidden">
+          <div className="flex flex-col items-center justify-center bg-slate-950/30 border border-slate-900/50 rounded-xl p-4 relative overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.08)_0%,transparent_70%)]"></div>
-            <div className="relative flex items-center justify-center w-full h-32">
+            <div className="relative flex items-center justify-center w-full">
               <Image
                 src={activeLevel.idleAssetPath}
                 alt={activeLevel.enemyName}
                 width={1024}
                 height={1024}
-                className="max-w-full h-auto object-contain"
+                className="w-40 max-w-full h-auto object-contain"
                 priority
                 unoptimized
               />
             </div>
-            <div className="mt-2 text-[9px] text-purple-400 font-bold uppercase tracking-wider text-center">
+            <div className="mt-3 text-[9px] text-purple-400 font-bold uppercase tracking-wider text-center">
               {activeLevel.enemyName} (Idle Preview)
             </div>
           </div>
