@@ -39,7 +39,7 @@ export default function Home() {
             🐾
           </div>
           <div>
-            <h2 className="font-extrabold text-base text-slate-100">Jabby the Corgi</h2>
+            <h2 className="font-extrabold text-base text-slate-100">Jabby the Poodle</h2>
             <div className="flex gap-4 mt-1 text-xs text-slate-400">
               <div>
                 HP: <span className="text-emerald-400 font-bold">{GAME_CONFIG.player.startingMaxHP}</span>
@@ -130,8 +130,10 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <div className="text-xs italic text-slate-400 bg-slate-950/40 p-2.5 rounded-lg border border-slate-900/60 leading-relaxed">
-              Dialogue Hook: <code className="text-[10px] bg-slate-900 px-1 py-0.5 rounded font-mono text-purple-400">{activeLevel.dialogueHook}</code>
+            <div className="text-xs italic text-slate-300 bg-slate-950/40 p-3 rounded-lg border border-slate-900/60 leading-relaxed relative pl-7 pr-4">
+              <span className="absolute left-2.5 top-1.5 text-purple-500 font-serif text-lg">“</span>
+              {activeLevel.introDialogue}
+              <span className="absolute right-2.5 bottom-0.5 text-purple-500 font-serif text-lg">”</span>
             </div>
           </div>
 
