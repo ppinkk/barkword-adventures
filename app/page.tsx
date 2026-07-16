@@ -17,7 +17,7 @@ export default function Home() {
       <div className="text-center py-4">
         <div className="inline-block animate-bounce mb-2">
           <Image
-            src="/assets/poodle-idle.png"
+            src={GAME_CONFIG.player.idlePath}
             alt="Jabby Poodle"
             width={744}
             height={659}
@@ -47,7 +47,7 @@ export default function Home() {
           <div className="w-16 h-16 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 p-0.5 shadow-md shadow-pink-500/20 animate-pulse flex-shrink-0">
             <div className="w-full h-full bg-slate-900 rounded-[10px] overflow-hidden flex items-center justify-center p-1">
               <Image
-                src="/assets/poodle-idle.png"
+                src={GAME_CONFIG.player.idlePath}
                 alt="Jabby the Poodle"
                 width={744}
                 height={659}
@@ -160,7 +160,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.08)_0%,transparent_70%)]"></div>
             <div className="relative flex items-center justify-center w-full">
               <Image
-                src={activeLevel.idleAssetPath}
+                src={activeLevel.idlePath}
                 alt={activeLevel.enemyName}
                 width={1024}
                 height={1024}
