@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { GAME_CONFIG } from "@/config/gameConfig";
 
 export default function Home() {
@@ -15,7 +16,16 @@ export default function Home() {
       {/* Header */}
       <div className="text-center py-4">
         <div className="inline-block animate-bounce mb-2">
-          <span className="text-4xl">🐕💤</span>
+          <Image
+            src="/assets/poodle-idle.png"
+            alt="Jabby Poodle"
+            width={64}
+            height={64}
+            className="max-w-full h-auto object-contain mx-auto"
+            priority
+            unoptimized
+            style={{ imageRendering: "pixelated" }}
+          />
         </div>
         <h1 className="text-2xl font-black tracking-wider bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-400 bg-clip-text text-transparent uppercase drop-shadow-md">
           Barkword Adventures
@@ -35,8 +45,18 @@ export default function Home() {
           </span>
         </div>
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center text-2xl font-bold shadow-md shadow-pink-500/20 animate-pulse">
-            🐾
+          <div className="w-16 h-16 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 p-0.5 shadow-md shadow-pink-500/20 animate-pulse flex-shrink-0">
+            <div className="w-full h-full bg-slate-900 rounded-[10px] overflow-hidden flex items-center justify-center p-1">
+              <Image
+                src="/assets/poodle-idle.png"
+                alt="Jabby the Poodle"
+                width={56}
+                height={56}
+                className="max-w-full h-auto object-contain"
+                unoptimized
+                style={{ imageRendering: "pixelated" }}
+              />
+            </div>
           </div>
           <div>
             <h2 className="font-extrabold text-base text-slate-100">Jabby the Poodle</h2>
@@ -115,7 +135,7 @@ export default function Home() {
         </div>
 
         {/* Active level details */}
-        <div className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-4 flex-1 flex flex-col justify-between">
+        <div className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-4 flex-1 flex flex-col justify-between gap-4">
           <div>
             <div className="flex justify-between items-start gap-2 mb-2">
               <h4 className="text-sm font-black text-purple-300 leading-tight">
@@ -137,9 +157,24 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-4 border-t border-slate-900 pt-3 flex items-center justify-between text-[10px] text-slate-500">
-            <span>Visual PNG assets will load here in Phase 2</span>
-            <span>👾</span>
+          {/* Enemy Visual Preview */}
+          <div className="flex-1 flex flex-col items-center justify-center min-h-[140px] bg-slate-950/30 border border-slate-900/50 rounded-xl p-3 relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.08)_0%,transparent_70%)]"></div>
+            <div className="relative flex items-center justify-center w-full h-32">
+              <Image
+                src={activeLevel.idleAssetPath}
+                alt={activeLevel.enemyName}
+                width={120}
+                height={120}
+                className="max-w-full max-h-full h-auto w-auto object-contain"
+                priority
+                unoptimized
+                style={{ imageRendering: "pixelated" }}
+              />
+            </div>
+            <div className="mt-2 text-[9px] text-purple-400 font-bold uppercase tracking-wider text-center">
+              {activeLevel.enemyName} (Idle Preview)
+            </div>
           </div>
         </div>
       </div>

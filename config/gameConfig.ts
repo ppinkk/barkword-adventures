@@ -3,6 +3,7 @@ export interface Level {
   hp: number;
   attack: number;
   introDialogue: string;
+  idleAssetPath: string;
 }
 
 export interface GameConfig {
@@ -25,18 +26,21 @@ export const GAME_CONFIG: GameConfig = {
       hp: 75,
       attack: 4,
       introDialogue: "Step aside, pup! I've got a high-priority delivery of doom for you!",
+      idleAssetPath: "/assets/enemy-courier-idle.png",
     },
     {
       enemyName: "The Autonomous Robot Vacuum",
       hp: 150,
       attack: 8,
       introDialogue: "Whirr... Dirt detected. Initiating maximum suction protocol. Prepare to be swept away!",
+      idleAssetPath: "/assets/enemy-vacuum-idle.png",
     },
     {
       enemyName: "The Robotic Smart Bathtub",
       hp: 300,
       attack: 15,
       introDialogue: "Splash! The water is fine... and full of electrical nightmares! Ready for a dip?",
+      idleAssetPath: "/assets/enemy-bathtub-idle.png",
     },
   ],
   calculateDamage: (wordLength: number) => wordLength * wordLength,
